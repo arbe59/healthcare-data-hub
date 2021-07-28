@@ -1,0 +1,12 @@
+<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" *ngIf="(auth.isAuthenticated$ | async) === false">
+    <li class="mr-2 ml-2">
+        <app-signup-button class="m-1">
+        </app-signup-button>
+    </li>
+    <li class="mr-2 ml-2">
+        <app-login-button class="m-1">
+        </app-login-button>
+    </li>
+</ul>
+
+<profile-picture *ngIf="(auth.isAuthenticated$ | async)"></profile-picture>

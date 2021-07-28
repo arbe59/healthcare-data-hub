@@ -1,5 +1,19 @@
-<div>
-  <h3>Here is today's weather (hope it's nice):</h3>
-</div>
-<a routerLink="/weather">Weather</a>
-<router-outlet></router-outlet>
+<header>
+  <app-nav></app-nav>
+</header>
+
+<main>
+  <div class="container">
+    <div class="row" *ngIf="(auth.isAuthenticated$ | async)">
+      <div class="col-2"><dashboard></dashboard></div>
+      <div class="col-10"><router-outlet></router-outlet></div>
+    </div>
+    <div class="row" *ngIf="(auth.isAuthenticated$ | async) === false">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <footer class="container footer fixed-bottom text-center py-3">
+    <span class="fs-5 text-muted">&copy; 2021 Healthcare Data Hub</span>
+  </footer>
+</main>

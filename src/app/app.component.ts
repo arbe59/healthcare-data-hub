@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
-import { environment } from './../environments/environment';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: []
 })
 export class AppComponent {
-  title = 'healthcare-data-hub';
-
-  constructor() {
-    console.log(environment.production);
-  }
+  constructor(public auth: AuthService) { }
 }
