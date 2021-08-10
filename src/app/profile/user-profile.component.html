@@ -1,14 +1,36 @@
-<div class="container-fluid" *ngIf="auth.user$ | async as user">
+<div class="container-fluid" *ngIf="vm$ | async as vm">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-3">
+            <h1 class="fs-3 text-center">Authentication Info</h1>
+        </div>
+        <div class="col-md-6 mb-3">
+            <h1 class="fs-3 text-center">Healthcare User/Account Info</h1>
+        </div>
+    </div>
     <div class="row align-items-center profile-header">
-        <div class="col-md-2 mb-3">
+        <div class="col-md-3 mb-3">
             <img
-                [src]="user.picture"
+                [src]="vm.user.picture"
                 alt="User's profile picture"
                 class="rounded-circle img-fluid profile-picture"/>
         </div>
-        <div class="col-md text-center text-md-left">
-            <h2>{{ user.name }}</h2>
-            <p class="lead text-muted">{{ user.email }}</p>
+        <div class="col-md-3 text-center text-md-left">
+            <h2 class="fs-4">{{ vm.user.name }}</h2>
+            <p class="lead text-muted">{{ vm.user.email }}</p>
+        </div>
+        <div class="col-md-3 mb-3 text-md-left">
+            <p>Account Name:</p>
+            <p>Is Account Owner:</p>
+        </div>
+        <div class="col-md-3 mb-3">
+            <p>{{ vm.healthAccount.accountName }}</p>
+            <p *ngIf="vm.healthAccount.accountOwnerUserID === vm.healthUser.id">Yes</p>
+            <p *ngIf="vm.healthAccount.accountOwnerUserID !== vm.healthUser.id">No</p>
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="mb-3">
+            
         </div>
     </div>
 </div>

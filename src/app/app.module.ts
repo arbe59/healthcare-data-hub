@@ -11,7 +11,6 @@ import { LoginButtonComponent } from './auth/login-button.component';
 import { SignupButtonComponent } from './auth/signup-button.component';
 import { ProfileComponent } from './profile/user-profile.component';
 import { ProfilePictureComponent } from './profile/profile-pic.component';
-import { UserListComponent } from './users/user-list.component';
 import { HomeComponent } from './home.component';
 import { AuthComponent } from './auth/auth.component';
 import { PatientInfoComponent } from './info/patients-info.component';
@@ -27,7 +26,6 @@ import { DashboardComponent } from './profile/dashboard.component';
     SignupButtonComponent,
     ProfileComponent,
     ProfilePictureComponent,
-    UserListComponent,
     AuthComponent,
     PatientInfoComponent,
     ProviderInfoComponent,

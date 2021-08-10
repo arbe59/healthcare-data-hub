@@ -4,4 +4,6 @@ export class HealthcareUser {
     lastName: string;
     dateOfBirth: Date;
     genderID: number;
+    accountID: number;
+    email: string;
 }

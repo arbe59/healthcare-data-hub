@@ -4,11 +4,12 @@
 
 <main>
   <div class="container">
-    <div class="row" *ngIf="(auth.isAuthenticated$ | async)">
+    <!-- <div class="row" *ngIf="(auth.isAuthenticated$ | async)">
       <div class="col-2"><dashboard></dashboard></div>
       <div class="col-10"><router-outlet></router-outlet></div>
-    </div>
-    <div class="row" *ngIf="(auth.isAuthenticated$ | async) === false">
+    </div> -->
+    <!-- <div class="row" *ngIf="(auth.isAuthenticated$ | async) === false"> -->
+    <div class="row">
       <router-outlet></router-outlet>
     </div>
   </div>
